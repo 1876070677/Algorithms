@@ -1,0 +1,2 @@
+-- 코드를 입력하세요
+SELECT CAR_ID, if(SUM(CNT) = 0, "대여 가능", "대여중") as AVAILABILITY from (SELECT CAR_ID, IF(START_DATE <= "20221016" and END_DATE >= "20221016", 1, 0) as CNT from CAR_RENTAL_COMPANY_RENTAL_HISTORY) A group by CAR_ID order by CAR_ID desc; 
