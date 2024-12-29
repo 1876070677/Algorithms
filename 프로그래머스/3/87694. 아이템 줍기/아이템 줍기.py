@@ -45,8 +45,6 @@ def solution(rectangle, characterX, characterY, itemX, itemY):
                     lines[(i, y2)].remove((i, y1))
             
         
-    print(len(lines))
-        
     q = deque()
     q.append([characterX, characterY, 0])
     
@@ -58,7 +56,6 @@ def solution(rectangle, characterX, characterY, itemX, itemY):
         
         if (cx, cy) not in lines:
             continue
-        print(cx, cy)
         if cx == itemX and cy == itemY:
             answer = cnt
             break
